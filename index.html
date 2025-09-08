@@ -1,10 +1,1629 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My GitHub Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ali Murtaza Bhutto - Cybersecurity & Data Specialist</title>
+    <meta name="description" content="Cybersecurity, OSINT, and Data Specialist portfolio of Ali Murtaza Bhutto.">
+    <meta name="theme-color" content="#0a0a0f">
+    <meta property="og:title" content="Ali Murtaza Bhutto — Cybersecurity & Data Specialist">
+    <meta property="og:description" content="Cybersecurity • OSINT • Data Analytics">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://alibhutto69.github.io/">
+    <meta property="og:image" content="https://opengraph.githubassets.com/1/alibhutto69/alibhutto69">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .skip-link {
+            position: absolute;
+            left: -9999px;
+            top: auto;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            z-index: -1;
+        }
+        .skip-link:focus {
+            left: 1rem;
+            top: 1rem;
+            width: auto;
+            height: auto;
+            background: #00d9ff;
+            color: #0a0a0f;
+            padding: 0.5rem 0.75rem;
+            border-radius: 4px;
+            z-index: 2000;
+        }
+        .skip-link { position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden; z-index: -1; }
+        .skip-link:focus { left: 1rem; top: 1rem; width: auto; height: auto; background: #00d9ff; color: #0a0a0f; padding: 0.5rem 0.75rem; border-radius: 4px; z-index: 2000; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+            background: #0a0a0f;
+            color: #e0e6ed;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Tech web background (scoped to hero only) */
+        .tech-grid {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            background: radial-gradient(circle at 50% 40%, rgba(0, 217, 255, 0.08) 0%, rgba(10, 10, 15, 0.6) 60%, rgba(10, 10, 15, 0.9) 100%);
+        }
+
+        .grid-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .grid-node {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: #00d9ff;
+            border-radius: 50%;
+            box-shadow: 0 0 15px rgba(0, 217, 255, 0.5);
+            animation: pulse-tech 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse-tech {
+            0%, 100% { 
+                transform: scale(1);
+                box-shadow: 0 0 15px rgba(0, 217, 255, 0.5);
+            }
+            50% { 
+                transform: scale(1.3);
+                box-shadow: 0 0 25px rgba(0, 217, 255, 0.8);
+            }
+        }
+
+        .grid-line {
+            position: absolute;
+            height: 1px;
+            background: linear-gradient(90deg, rgba(0, 217, 255, 0.2), rgba(0, 217, 255, 0.05), rgba(0, 217, 255, 0.2));
+            transform-origin: left center;
+            animation: data-stream 3s linear infinite;
+        }
+
+        @keyframes data-stream {
+            0%, 100% { opacity: 0.2; }
+            50% { opacity: 0.6; }
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 10, 15, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0, 217, 255, 0.2);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        /* Ensure hero content sits above its background */
+        .hero { position: relative; z-index: 1; }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.6rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, #00d9ff, #0099cc, #00b8e6);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: tech-glow 3s ease-in-out infinite;
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        @keyframes tech-glow {
+            0%, 100% { 
+                background-position: 0% 50%;
+                text-shadow: 0 0 20px rgba(0, 217, 255, 0.3);
+            }
+            50% { 
+                background-position: 100% 50%;
+                text-shadow: 0 0 30px rgba(0, 217, 255, 0.5);
+            }
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: #e0e6ed;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 0.5rem 0;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: #00d9ff;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 50%;
+            background: linear-gradient(90deg, #00d9ff, #0099cc);
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+            left: 0;
+        }
+
+        .contact-btn {
+            background: linear-gradient(45deg, #00d9ff, #0099cc);
+            color: #0a0a0f;
+            padding: 0.8rem 1.8rem;
+            border: none;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        .contact-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 217, 255, 0.3);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .hero-content {
+            max-width: 1000px;
+            animation: slideUp 1.5s ease-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1 {
+            font-size: 4.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #ffffff, #00d9ff, #0099cc);
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradient-shift 4s ease-in-out infinite;
+            line-height: 1.1;
+        }
+
+        @keyframes gradient-shift {
+            0%, 100% { background-position: 0% 50%; }
+            25% { background-position: 100% 50%; }
+            50% { background-position: 100% 100%; }
+            75% { background-position: 0% 100%; }
+        }
+
+        .hero-subtitle {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            color: #00d9ff;
+            font-weight: 600;
+            animation: fadeInUp 1s ease 0.3s both;
+        }
+
+        .hero-description {
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            color: #b0b8c5;
+            max-width: 800px;
+            line-height: 1.7;
+            animation: fadeInUp 1s ease 0.5s both;
+        }
+
+        @keyframes fadeInUp {
+            from { 
+                opacity: 0; 
+                transform: translateY(30px);
+            }
+            to { 
+                opacity: 1; 
+                transform: translateY(0);
+            }
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+            animation: fadeInUp 1s ease 0.7s both;
+        }
+
+        .btn-primary {
+            background: linear-gradient(45deg, #00d9ff, #0099cc);
+            color: #0a0a0f;
+            padding: 1.2rem 2.5rem;
+            border: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-radius: 4px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(0, 217, 255, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #00d9ff;
+            padding: 1.2rem 2.5rem;
+            border: 2px solid #00d9ff;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-radius: 4px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-secondary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: #00d9ff;
+            transition: width 0.3s ease;
+            z-index: -1;
+        }
+
+        .btn-secondary:hover::before {
+            width: 100%;
+        }
+
+        .btn-secondary:hover {
+            color: #0a0a0f;
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(0, 217, 255, 0.2);
+        }
+
+        /* Tech Stack */
+        .tech-stack {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s ease 0.9s both;
+        }
+
+        .tech-badge {
+            background: rgba(0, 217, 255, 0.1);
+            border: 1px solid rgba(0, 217, 255, 0.3);
+            padding: 1rem 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            border-radius: 4px;
+        }
+
+        .tech-badge:hover {
+            transform: translateY(-5px);
+            background: rgba(0, 217, 255, 0.15);
+            border-color: #00d9ff;
+            box-shadow: 0 10px 25px rgba(0, 217, 255, 0.2);
+        }
+
+        .tech-icon {
+            font-size: 1.5rem;
+        }
+
+        .tech-text {
+            font-weight: 600;
+            color: #00d9ff;
+            font-size: 0.9rem;
+        }
+
+        /* About Section */
+        .about {
+            padding: 8rem 2rem;
+            background: transparent;
+            position: relative;
+        }
+
+        .about::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #00d9ff, transparent);
+        }
+
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 3.5rem;
+            margin-bottom: 2rem;
+            background: linear-gradient(45deg, #00d9ff, #0099cc);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800;
+        }
+
+        .about-text p {
+            color: #b0b8c5;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        .current-role {
+            background: rgba(0, 217, 255, 0.05);
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            border-left: 4px solid #00d9ff;
+            padding: 2rem;
+            margin: 2rem 0;
+            backdrop-filter: blur(10px);
+            border-radius: 4px;
+        }
+
+        .current-role h3 {
+            color: #00d9ff;
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .role-info {
+            color: #00d9ff;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .current-role p {
+            color: #b0b8c5;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .education {
+            margin-top: 2.5rem;
+        }
+
+        .education h3 {
+            color: #00d9ff;
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+
+        .degree {
+            background: rgba(0, 153, 204, 0.05);
+            border-left: 3px solid #0099cc;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+            border-radius: 4px;
+        }
+
+        .degree:hover {
+            background: rgba(0, 153, 204, 0.1);
+            transform: translateX(10px);
+        }
+
+        .degree-title {
+            color: #00d9ff;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .degree-school {
+            color: #b0b8c5;
+            margin: 0.5rem 0;
+        }
+
+        .degree-specialization {
+            color: #00d9ff;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .about-visual {
+            position: relative;
+        }
+
+        /* Tech Terminal */
+        .tech-terminal {
+            background: rgba(10, 10, 15, 0.9);
+            border: 1px solid rgba(0, 217, 255, 0.3);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .terminal-header {
+            background: rgba(0, 217, 255, 0.1);
+            padding: 1rem 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            border-bottom: 1px solid rgba(0, 217, 255, 0.2);
+        }
+
+        .terminal-controls {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .terminal-btn {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .terminal-btn.close { background: #ff5f57; }
+        .terminal-btn.minimize { background: #ffbd2e; }
+        .terminal-btn.maximize { background: #28ca42; }
+
+        .terminal-title {
+            color: #00d9ff;
+            font-family: 'Courier New', monospace;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .terminal-body {
+            padding: 2rem;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            line-height: 1.8;
+        }
+
+        .terminal-line {
+            opacity: 0;
+            animation: type-in 0.8s ease forwards;
+            margin-bottom: 0.5rem;
+        }
+
+        .terminal-line:nth-child(1) { animation-delay: 0.5s; }
+        .terminal-line:nth-child(2) { animation-delay: 1s; }
+        .terminal-line:nth-child(3) { animation-delay: 1.5s; }
+        .terminal-line:nth-child(4) { animation-delay: 2s; }
+        .terminal-line:nth-child(5) { animation-delay: 2.5s; }
+        .terminal-line:nth-child(6) { animation-delay: 3s; }
+
+        @keyframes type-in {
+            0% { 
+                opacity: 0; 
+                transform: translateX(-10px);
+            }
+            100% { 
+                opacity: 1; 
+                transform: translateX(0);
+            }
+        }
+
+        .prompt { color: #00d9ff; font-weight: 600; }
+        .command { color: #00b8e6; }
+        .output { color: #b0b8c5; }
+        .highlight { color: #00d9ff; font-weight: 600; }
+        .success { color: #28ca42; }
+
+        /* Experience Section */
+        .experience {
+            padding: 8rem 2rem;
+            background: transparent;
+            position: relative;
+        }
+
+        .experience::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #0099cc, transparent);
+        }
+
+        .experience-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .experience h2 {
+            text-align: center;
+            font-size: 3.5rem;
+            margin-bottom: 4rem;
+            background: linear-gradient(45deg, #ffffff, #00d9ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, #00d9ff, #0099cc, #00d9ff);
+            box-shadow: 0 0 10px rgba(0, 217, 255, 0.3);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 4rem;
+            padding-left: 3rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -9px;
+            top: 0;
+            width: 18px;
+            height: 18px;
+            background: #00d9ff;
+            border: 3px solid #0a0a0f;
+            border-radius: 50%;
+            box-shadow: 0 0 15px rgba(0, 217, 255, 0.5);
+        }
+
+        .job-card {
+            background: rgba(0, 217, 255, 0.03);
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            padding: 2.5rem;
+            transition: all 0.4s ease;
+            backdrop-filter: blur(10px);
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .job-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 217, 255, 0.1), transparent);
+            transition: left 0.6s;
+        }
+
+        .job-card:hover::before {
+            left: 100%;
+        }
+
+        .job-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0, 217, 255, 0.15);
+            border-color: #00d9ff;
+            background: rgba(0, 217, 255, 0.06);
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .job-title {
+            font-size: 1.6rem;
+            color: #00d9ff;
+            font-weight: 700;
+        }
+
+        .job-company {
+            color: #00b8e6;
+            font-weight: 600;
+            margin: 0.5rem 0;
+        }
+
+        .job-period {
+            color: #ffffff;
+            font-weight: 600;
+            padding: 0.6rem 1.2rem;
+            background: rgba(0, 217, 255, 0.15);
+            border: 1px solid rgba(0, 217, 255, 0.3);
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        .job-achievements {
+            list-style: none;
+        }
+
+        .job-achievements li {
+            color: #b0b8c5;
+            margin-bottom: 0.8rem;
+            position: relative;
+            padding-left: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .job-achievements li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #00d9ff;
+            font-weight: 600;
+        }
+
+        /* Skills Section */
+        .skills {
+            padding: 8rem 2rem;
+            background: transparent;
+        }
+
+        .skills-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .skills h2 {
+            text-align: center;
+            font-size: 3.5rem;
+            margin-bottom: 4rem;
+            background: linear-gradient(45deg, #00d9ff, #0099cc);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .skill-category {
+            background: rgba(0, 217, 255, 0.03);
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            padding: 2.5rem;
+            transition: all 0.4s ease;
+            backdrop-filter: blur(10px);
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .skill-category::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #00d9ff, #0099cc);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .skill-category:hover::before {
+            transform: scaleX(1);
+        }
+
+        .skill-category:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0, 217, 255, 0.15);
+            border-color: #00d9ff;
+            background: rgba(0, 217, 255, 0.06);
+        }
+
+        .skill-category h3 {
+            color: #00d9ff;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-weight: 700;
+        }
+
+        .skill-category-icon {
+            font-size: 2rem;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+
+        .skill-tag {
+            background: rgba(0, 217, 255, 0.1);
+            color: #00d9ff;
+            padding: 0.5rem 1rem;
+            font-size: 0.9rem;
+            border: 1px solid rgba(0, 217, 255, 0.3);
+            transition: all 0.3s ease;
+            font-weight: 500;
+            border-radius: 4px;
+        }
+
+        .skill-tag:hover {
+            background: rgba(0, 217, 255, 0.2);
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 217, 255, 0.2);
+        }
+
+        /* Certifications */
+        .certifications {
+            padding: 8rem 2rem;
+            background: transparent;
+            position: relative;
+        }
+
+        .certifications::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #00d9ff, transparent);
+        }
+
+        .certifications-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .certifications h2 {
+            text-align: center;
+            font-size: 3.5rem;
+            margin-bottom: 4rem;
+            background: linear-gradient(45deg, #0099cc, #00d9ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800;
+        }
+
+        .certs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .cert-card {
+            background: rgba(0, 153, 204, 0.05);
+            border: 1px solid rgba(0, 153, 204, 0.2);
+            padding: 1.8rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cert-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 153, 204, 0.1), transparent);
+            transition: left 0.5s;
+        }
+
+        .cert-card:hover::before {
+            left: 100%;
+        }
+
+        .cert-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 15px 35px rgba(0, 153, 204, 0.15);
+            border-color: #0099cc;
+            background: rgba(0, 153, 204, 0.1);
+        }
+
+        .cert-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: block;
+            color: #0099cc;
+        }
+
+        .cert-name {
+            color: #0099cc;
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .cert-issuer {
+            color: #b0b8c5;
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 4rem 2rem 2rem;
+            border-top: 1px solid rgba(0, 217, 255, 0.2);
+            text-align: center;
+            position: relative;
+        }
+
+        .footer-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .contact-card {
+            background: rgba(0, 217, 255, 0.05);
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            border-radius: 8px;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 217, 255, 0.15);
+            border-color: #00d9ff;
+        }
+
+        .contact-icon {
+            font-size: 2rem;
+            color: #00d9ff;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .contact-label {
+            color: #00d9ff;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-value {
+            color: #b0b8c5;
+            font-size: 1rem;
+        }
+
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .social-link {
+            color: #00d9ff;
+            font-size: 1.8rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            width: 60px;
+            height: 60px;
+            background: rgba(0, 217, 255, 0.1);
+            border: 1px solid rgba(0, 217, 255, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .social-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: #00d9ff;
+            transition: left 0.3s;
+            z-index: -1;
+        }
+
+        .social-link:hover::before {
+            left: 0;
+        }
+
+        .social-link:hover {
+            color: #0a0a0f;
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 10px 25px rgba(0, 217, 255, 0.3);
+        }
+
+        .footer-text {
+            color: #6b7280;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(0, 217, 255, 0.1);
+            padding-top: 2rem;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 3rem;
+            }
+            
+            .about-container {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            
+            .job-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .hero-buttons, .tech-stack {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn-primary, .btn-secondary {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .certs-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            * { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
+            .tech-grid { background: #0a0a0f; }
+        }
+        
+        /* Scroll-reveal animations */
+        .reveal-up {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: transform 600ms cubic-bezier(0.22, 1, 0.36, 1), opacity 600ms ease;
+            will-change: transform, opacity;
+        }
+        .reveal-up.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+    </style>
+    </style>
 </head>
 <body>
-  <h1>Hello, world!</h1>
-  <p>This is my first GitHub Page 🚀</p>
+    <div class="app-bg"></div>
+    <a href="#main" class="skip-link">Skip to main content</a>
+    
+
+    <header>
+        <nav>
+            <a href="#" class="logo">Ali Murtaza Bhutto</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+            </ul>
+            <a href="#contact" class="contact-btn">Get in Touch</a>
+        </nav>
+    </header>
+
+    <main id="main">
+        <section class="hero">
+            <div class="tech-grid">
+                <canvas class="grid-canvas" id="gridCanvas"></canvas>
+            </div>
+            <div class="hero-content">
+                <h1>Ali Murtaza Bhutto</h1>
+                <div class="hero-subtitle">Cybersecurity & Data Specialist</div>
+                <p class="hero-description">
+                    Cybersecurity professional specializing in open source intelligence, data acquisition, 
+                    and threat analysis. Expert in Python automation, web scraping, and security assessments 
+                    with advanced capabilities in data processing and cyber threat intelligence.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#experience" class="btn-primary">View Experience</a>
+                    <a href="mailto:alibhutto101112@gmail.com" class="btn-secondary">Contact Me</a>
+                </div>
+                
+                <div class="tech-stack">
+                    <div class="tech-badge">
+                        <span class="tech-icon">🐍</span>
+                        <span class="tech-text">Python</span>
+                    </div>
+                    <div class="tech-badge">
+                        <span class="tech-icon">🔍</span>
+                        <span class="tech-text">OSINT</span>
+                    </div>
+                    <div class="tech-badge">
+                        <span class="tech-icon">🛡️</span>
+                        <span class="tech-text">Cybersecurity</span>
+                    </div>
+                    <div class="tech-badge">
+                        <span class="tech-icon">📊</span>
+                        <span class="tech-text">Data Analysis</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <div class="about-container">
+                <div class="about-text">
+                    <h2 class="reveal-up">About Me</h2>
+                    <p class="reveal-up">
+                        Cybersecurity professional with expertise in open source intelligence (OSINT), 
+                        data acquisition, and security analysis. Experienced in developing automated 
+                        solutions for data collection and processing complex datasets for actionable insights.
+                    </p>
+                    
+                    <div class="current-role reveal-up">
+                        <h3>Current Roles</h3>
+                        <div class="role-info">Active Projects</div>
+                        <p>
+                            <strong>Data Acquisition Specialist</strong> - Alphasearch Inc (Remote, USA)<br>
+                            <strong>Information Security Consultant</strong> - CybeRisk Solutions (Karachi, Pakistan)<br><br>
+                            Developing scalable OSINT pipelines, conducting security assessments, 
+                            and providing comprehensive cybersecurity consulting services across 
+                            international standards and frameworks.
+                        </p>
+                    </div>
+                    
+                    <div class="education reveal-up">
+                        <h3>Education</h3>
+                        <div class="degree">
+                            <div class="degree-title">MS Cybersecurity</div>
+                            <div class="degree-school">SZABIST University, Karachi, Pakistan</div>
+                            <div class="degree-specialization">Focus: Open Source Intelligence & Network Security</div>
+                        </div>
+                        <div class="degree">
+                            <div class="degree-title">BS Computer Science</div>
+                            <div class="degree-school">SZABIST University, Karachi, Pakistan</div>
+                            <div class="degree-specialization">Specialization: Cybersecurity</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-visual reveal-up">
+                    <div class="tech-terminal">
+                        <div class="terminal-header">
+                            <div class="terminal-controls">
+                                <div class="terminal-btn close"></div>
+                                <div class="terminal-btn minimize"></div>
+                                <div class="terminal-btn maximize"></div>
+                            </div>
+                            <div class="terminal-title">system_profile.py</div>
+                        </div>
+                        <div class="terminal-body">
+                            <div class="terminal-line">
+                                <span class="prompt">cybersec@workstation:~$</span> <span class="command">python profile.py</span>
+                            </div>
+                            <div class="terminal-line">
+                                <span class="highlight">Cybersecurity Specialist</span>
+                            </div>
+                            <div class="terminal-line">
+                                <span class="prompt">cybersec@workstation:~$</span> <span class="command">cat specializations.txt</span>
+                            </div>
+                            <div class="terminal-line">
+                                <span class="success">✓ Open Source Intelligence (OSINT)</span>
+                            </div>
+                            <div class="terminal-line">
+                                <span class="success">✓ Data Acquisition & Processing</span>
+                            </div>
+                            <div class="terminal-line">
+                                <span class="success">✓ Security Assessment & Analysis</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="experience" id="experience">
+            <div class="experience-container">
+                <h2 class="reveal-up">Professional Experience</h2>
+                <div class="timeline">
+                    <div class="timeline-item reveal-up">
+                        <div class="job-card">
+                            <div class="job-header">
+                                <div>
+                                    <div class="job-title">Open Source Data Acquisition Specialist</div>
+                                    <div class="job-company">Alphasearch Inc, United States (Remote)</div>
+                                </div>
+                                <div class="job-period">April 2025 – Present</div>
+                            </div>
+                            <ul class="job-achievements">
+                                <li>Engineered advanced OSINT collection pipelines processing large-scale data from global sources</li>
+                                <li>Developed sophisticated scraping algorithms using Python, Selenium, and custom frameworks</li>
+                                <li>Maintained secure, containerized data acquisition systems with high availability</li>
+                                <li>Conducted targeted data collection for threat indicators and infrastructure analysis</li>
+                                <li>Built multi-threaded processing systems ensuring data integrity and operational security</li>
+                                <li>Collaborated with analysts to transform raw data into actionable intelligence reports</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item reveal-up">
+                        <div class="job-card">
+                            <div class="job-header">
+                                <div>
+                                    <div class="job-title">Information Security Consultant</div>
+                                    <div class="job-company">CybeRisk Solutions, Karachi, Pakistan</div>
+                                </div>
+                                <div class="job-period">Jan 2025 – Present</div>
+                            </div>
+                            <ul class="job-achievements">
+                                <li>Conduct comprehensive security assessments against international standards</li>
+                                <li>Develop strategic security architectures to enhance organizational resilience</li>
+                                <li>Execute penetration testing to identify and validate security vulnerabilities</li>
+                                <li>Lead incident response and digital forensics investigations</li>
+                                <li>Provide strategic counsel on cybersecurity frameworks and compliance</li>
+                                <li>Design and deliver security awareness training programs</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item reveal-up">
+                        <div class="job-card">
+                            <div class="job-header">
+                                <div>
+                                    <div class="job-title">Business Analyst / Security Researcher</div>
+                                    <div class="job-company">The Cosmic Dolphins, Lausanne, Switzerland</div>
+                                </div>
+                                <div class="job-period">Apr 2023 – Jan 2025</div>
+                            </div>
+                            <ul class="job-achievements">
+                                <li>Authored comprehensive security documentation aligning security with product requirements</li>
+                                <li>Developed technical security specifications bridging requirements with implementation</li>
+                                <li>Conducted advanced risk assessments identifying critical security vulnerabilities</li>
+                                <li>Performed deep firmware analysis for potential security issues</li>
+                                <li>Developed and deployed security validation tools and testing frameworks</li>
+                                <li>Provided strategic recommendations for system hardening against threats</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+
+        <section class="skills" id="skills">
+            <div class="skills-container">
+                <h2 class="reveal-up">Technical Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category reveal-up">
+                        <h3>
+                            <span class="skill-category-icon">🐍</span>
+                            Programming & Automation
+                        </h3>
+                        <div class="skill-list">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Web Scraping</span>
+                            <span class="skill-tag">Selenium</span>
+                            <span class="skill-tag">Data Processing</span>
+                            <span class="skill-tag">API Development</span>
+                            <span class="skill-tag">Automation</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category reveal-up">
+                        <h3>
+                            <span class="skill-category-icon">🔍</span>
+                            OSINT & Research
+                        </h3>
+                        <div class="skill-list">
+                            <span class="skill-tag">Open Source Intelligence</span>
+                            <span class="skill-tag">Social Media Intelligence</span>
+                            <span class="skill-tag">Data Mining</span>
+                            <span class="skill-tag">Pattern Analysis</span>
+                            <span class="skill-tag">Information Gathering</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category reveal-up">
+                        <h3>
+                            <span class="skill-category-icon">🛡️</span>
+                            Cybersecurity
+                        </h3>
+                        <div class="skill-list">
+                            <span class="skill-tag">Security Assessment</span>
+                            <span class="skill-tag">Penetration Testing</span>
+                            <span class="skill-tag">Digital Forensics</span>
+                            <span class="skill-tag">Incident Response</span>
+                            <span class="skill-tag">Risk Analysis</span>
+                            <span class="skill-tag">Compliance</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category reveal-up">
+                        <h3>
+                            <span class="skill-category-icon">📊</span>
+                            Data & Analytics
+                        </h3>
+                        <div class="skill-list">
+                            <span class="skill-tag">Data Analysis</span>
+                            <span class="skill-tag">Business Intelligence</span>
+                            <span class="skill-tag">Machine Learning</span>
+                            <span class="skill-tag">Statistical Analysis</span>
+                            <span class="skill-tag">Data Visualization</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="certifications" id="certifications">
+            <div class="certifications-container">
+                <h2 class="reveal-up">Certifications</h2>
+                <div class="certs-grid">
+                    <div class="cert-card reveal-up">
+                        <span class="cert-icon">📱</span>
+                        <div class="cert-name">Android Forensics</div>
+                        <div class="cert-issuer">Belkasoft</div>
+                    </div>
+                    <div class="cert-card reveal-up">
+                        <span class="cert-icon">🪟</span>
+                        <div class="cert-name">Windows Forensics</div>
+                        <div class="cert-issuer">Belkasoft</div>
+                    </div>
+                    <div class="cert-card reveal-up">
+                        <span class="cert-icon">🔒</span>
+                        <div class="cert-name">Network Security Practitioner</div>
+                        <div class="cert-issuer">Certified</div>
+                    </div>
+                    <div class="cert-card reveal-up">
+                        <span class="cert-icon">🛡️</span>
+                        <div class="cert-name">AppSec Practitioner V2</div>
+                        <div class="cert-issuer">Certified</div>
+                    </div>
+                    <div class="cert-card reveal-up">
+                        <span class="cert-icon">📋</span>
+                        <div class="cert-name">ISO 27001:2022</div>
+                        <div class="cert-issuer">Associate</div>
+                    </div>
+                    <div class="cert-card reveal-up">
+                        <span class="cert-icon">🕵️</span>
+                        <div class="cert-name">Open Source Intelligence</div>
+                        <div class="cert-issuer">Specialist</div>
+                    </div>
+                    <div class="cert-card reveal-up">
+                        <span class="cert-icon">📊</span>
+                        <div class="cert-name">Google Data Analytics</div>
+                        <div class="cert-issuer">Google</div>
+                    </div>
+                    <div class="cert-card reveal-up">
+                        <span class="cert-icon">📈</span>
+                        <div class="cert-name">Business Intelligence</div>
+                        <div class="cert-issuer">Google</div>
+                    </div>
+                    <div class="cert-card reveal-up">
+                        <span class="cert-icon">🌐</span>
+                        <div class="cert-name">CISCO CCNA</div>
+                        <div class="cert-issuer">Training</div>
+                    </div>
+                    <div class="cert-card reveal-up">
+                        <span class="cert-icon">🤖</span>
+                        <div class="cert-name">Machine Learning</div>
+                        <div class="cert-issuer">Stanford</div>
+                    </div>
+                    <div class="cert-card reveal-up">
+                        <span class="cert-icon">🔍</span>
+                        <div class="cert-name">Nessus Fundamentals</div>
+                        <div class="cert-issuer">Tenable</div>
+                    </div>
+                    <div class="cert-card">
+                        <span class="cert-icon">⚔️</span>
+                        <div class="cert-name">Purple Teaming</div>
+                        <div class="cert-issuer">Picus</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-social" aria-label="Social links">
+                <a href="https://www.linkedin.com/in/alimurtazabhutto-138581216" class="social-link" title="LinkedIn" aria-label="LinkedIn profile" target="_blank" rel="noopener noreferrer">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.56c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.95v5.65H9.37V9h3.4v1.56h.05c.47-.9 1.62-1.85 3.34-1.85 3.57 0 4.23 2.35 4.23 5.4v6.34zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+                </a>
+                <a href="https://orcid.org/0009-0007-2787-943X" class="social-link" title="ORCID" aria-label="ORCID profile" target="_blank" rel="noopener noreferrer">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 .001 20.001A10 10 0 0 0 12 2Zm-3.7 6.2h1.2v7.6H8.3V8.2Zm3.1 0h3.2c2.2 0 3.6 1.4 3.6 3.8s-1.4 3.8-3.6 3.8h-3.2V8.2Zm1.2 1.1v5.4h2c1.5 0 2.5-1 2.5-2.7s-1-2.7-2.5-2.7h-2Z"/></svg>
+                </a>
+                <a href="mailto:alibhutto101112@gmail.com" class="social-link" title="Email" aria-label="Send email">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8V6l8 5 8-5v2Z"/></svg>
+                </a>
+            </div>
+            <div class="footer-text">
+                <p>© 2025 Ali Murtaza Bhutto. Cybersecurity • Data Analysis • OSINT</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Tech grid visualization
+        function createTechGrid() {
+            const canvas = document.getElementById('gridCanvas');
+            const ctx = canvas.getContext('2d');
+            const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            
+            function resizeCanvas() {
+                const dpr = Math.max(1, Math.min(2, window.devicePixelRatio || 1));
+                const logicalWidth = window.innerWidth;
+                const logicalHeight = window.innerHeight;
+                canvas.style.width = logicalWidth + 'px';
+                canvas.style.height = logicalHeight + 'px';
+                canvas.width = Math.floor(logicalWidth * dpr);
+                canvas.height = Math.floor(logicalHeight * dpr);
+                ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+            }
+            resizeCanvas();
+            window.addEventListener('resize', resizeCanvas);
+
+            const nodes = [];
+            const connections = [];
+            const nodeCount = reduceMotion ? 15 : 40;
+
+            // Create nodes
+            for (let i = 0; i < nodeCount; i++) {
+                nodes.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    vx: (Math.random() - 0.5) * 0.3,
+                    vy: (Math.random() - 0.5) * 0.3,
+                    size: Math.random() * 2 + 1,
+                    pulse: Math.random()
+                });
+            }
+
+            // Create connections
+            for (let i = 0; i < nodes.length; i++) {
+                for (let j = i + 1; j < nodes.length; j++) {
+                    const distance = Math.sqrt(
+                        Math.pow(nodes[i].x - nodes[j].x, 2) + 
+                        Math.pow(nodes[i].y - nodes[j].y, 2)
+                    );
+                    if (distance < 120) {
+                        connections.push({ from: i, to: j, distance });
+                    }
+                }
+            }
+
+            function animate() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                // Update nodes
+                nodes.forEach(node => {
+                    node.x += node.vx;
+                    node.y += node.vy;
+
+                    if (node.x < 0 || node.x > canvas.width) node.vx *= -1;
+                    if (node.y < 0 || node.y > canvas.height) node.vy *= -1;
+                });
+
+                // Update connections
+                connections.forEach(conn => {
+                    const fromNode = nodes[conn.from];
+                    const toNode = nodes[conn.to];
+                    conn.distance = Math.sqrt(
+                        Math.pow(fromNode.x - toNode.x, 2) + 
+                        Math.pow(fromNode.y - toNode.y, 2)
+                    );
+                });
+
+                // Draw connections
+                connections.forEach(conn => {
+                    if (conn.distance < 120) {
+                        const fromNode = nodes[conn.from];
+                        const toNode = nodes[conn.to];
+                        
+                        const opacity = Math.max(0, 1 - (conn.distance / 120));
+                        ctx.strokeStyle = `rgba(0, 217, 255, ${opacity * 0.2})`;
+                        ctx.lineWidth = 0.5;
+                        ctx.beginPath();
+                        ctx.moveTo(fromNode.x, fromNode.y);
+                        ctx.lineTo(toNode.x, toNode.y);
+                        ctx.stroke();
+                    }
+                });
+
+                // Draw nodes
+                nodes.forEach(node => {
+                    const pulseFactor = Math.sin(Date.now() * 0.002 + node.pulse * 8) * 0.2 + 0.8;
+                    ctx.fillStyle = `rgba(0, 217, 255, ${pulseFactor * 0.6})`;
+                    ctx.shadowBlur = 8;
+                    ctx.shadowColor = 'rgba(0, 217, 255, 0.3)';
+                    ctx.beginPath();
+                    ctx.arc(node.x, node.y, node.size * pulseFactor, 0, Math.PI * 2);
+                    ctx.fill();
+                    ctx.shadowBlur = 0;
+                });
+
+                if (!reduceMotion) {
+                    requestAnimationFrame(animate);
+                }
+            }
+
+            animate();
+        }
+
+        // Scroll-reveal IntersectionObserver
+        const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (!prefersReduced && 'IntersectionObserver' in window) {
+            const revealEls = document.querySelectorAll('.reveal-up');
+            const observer = new IntersectionObserver((entries, obs) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        obs.unobserve(entry.target);
+                    }
+                });
+            }, { root: null, rootMargin: '0px 0px -10% 0px', threshold: 0.15 });
+            revealEls.forEach(el => observer.observe(el));
+        }
+
+        // Subtle hero parallax
+        (function() {
+            const hero = document.querySelector('.hero');
+            if (!hero || prefersReduced) return;
+            hero.addEventListener('mousemove', (e) => {
+                const rect = hero.getBoundingClientRect();
+                const relX = (e.clientX - rect.left) / rect.width - 0.5;
+                const relY = (e.clientY - rect.top) / rect.height - 0.5;
+                const translateX = relX * 10;
+                const translateY = relY * 10;
+                const content = hero.querySelector('.hero-content');
+                if (content) {
+                    content.style.transform = `translate3d(${translateX}px, ${translateY}px, 0)`;
+                }
+            });
+            hero.addEventListener('mouseleave', () => {
+                const content = hero.querySelector('.hero-content');
+                if (content) content.style.transform = '';
+            });
+        })();
+
+        // Initialize on load
+        window.addEventListener('load', createTechGrid);
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Header background on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.background = 'rgba(10, 10, 15, 0.98)';
+            } else {
+                header.style.background = 'rgba(10, 10, 15, 0.95)';
+            }
+        });
+    </script>
 </body>
 </html>
